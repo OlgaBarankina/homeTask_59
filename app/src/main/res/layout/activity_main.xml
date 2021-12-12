@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_purple"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Guess Passed Seconds \n from 5-20"
+        android:textAlignment="center"
+        android:textColor="@color/purple_500"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEnterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginBottom="90dp"
+        android:text="Enter Passed Seconds"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <EditText
+        android:id="@+id/edSeconds"
+        android:layout_width="125dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="125dp"
+        android:ems="8"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tvEnterText"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvRandom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btStart"
+        app:layout_constraintTop_toBottomOf="@+id/edSeconds"
+        tools:layout_editor_absoluteX="188dp" />
+
+    <Button
+        android:id="@+id/btStart"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="248dp"
+        android:text="Start Game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <Button
+        android:id="@+id/btPost"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:text="Post Results"
+        app:layout_constraintBottom_toBottomOf="@+id/btStart"
+        app:layout_constraintStart_toEndOf="@+id/btStart"
+        app:layout_constraintTop_toTopOf="@+id/btStart"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/ivClock"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="36dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btStart"
+        app:srcCompat="@drawable/clock" />
+
+    <ImageView
+        android:id="@+id/ivWin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/ivClock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/win_prize" />
+
+    <ImageView
+        android:id="@+id/ivTryAgain"
+        android:layout_width="434dp"
+        android:layout_height="354dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="@+id/ivClock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.119"
+        app:srcCompat="@drawable/try_again" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
